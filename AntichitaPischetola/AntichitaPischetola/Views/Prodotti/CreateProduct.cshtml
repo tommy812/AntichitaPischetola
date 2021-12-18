@@ -1,0 +1,72 @@
+﻿@model AntichitaPischetola.Models.Prodotto
+
+<h4>Prodotto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeProdotto" class="control-label"></label>
+                <input asp-for="NomeProdotto" class="form-control" />
+                <span asp-validation-for="NomeProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoriaProdotto" class="control-label"></label>
+                <input asp-for="CategoriaProdotto" class="form-control" />
+                <span asp-validation-for="CategoriaProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescrizioneProdotto" class="control-label"></label>
+                <input asp-for="DescrizioneProdotto" class="form-control" />
+                <span asp-validation-for="DescrizioneProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnnoProdotto" class="control-label"></label>
+                <input asp-for="AnnoProdotto" class="form-control" />
+                <span asp-validation-for="AnnoProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PesoProdotto" class="control-label"></label>
+                <input asp-for="PesoProdotto" class="form-control" />
+                <span asp-validation-for="PesoProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AltezzaProdotto" class="control-label"></label>
+                <input asp-for="AltezzaProdotto" class="form-control" />
+                <span asp-validation-for="AltezzaProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LarghezzaProdotto" class="control-label"></label>
+                <input asp-for="LarghezzaProdotto" class="form-control" />
+                <span asp-validation-for="LarghezzaProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrezzoProdotto" class="control-label"></label>
+                <input asp-for="PrezzoProdotto" class="form-control" />
+                <span asp-validation-for="PrezzoProdotto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrezzoSpedizione" class="control-label"></label>
+                <input asp-for="PrezzoSpedizione" class="form-control" />
+                <span asp-validation-for="PrezzoSpedizione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhotoURL" class="control-label"></label>
+                <input asp-for="PhotoURL" class="form-control" />
+                <span asp-validation-for="PhotoURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

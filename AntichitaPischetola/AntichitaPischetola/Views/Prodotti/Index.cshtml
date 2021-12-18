@@ -1,0 +1,83 @@
+﻿@model IEnumerable<AntichitaPischetola.Models.Prodotto>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoriaProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescrizioneProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnoProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PesoProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AltezzaProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LarghezzaProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrezzoProdotto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrezzoSpedizione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhotoURL)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoriaProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescrizioneProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnoProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PesoProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AltezzaProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LarghezzaProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrezzoProdotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrezzoSpedizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoURL)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
